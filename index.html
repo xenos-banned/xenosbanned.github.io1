@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenoshvh | Welcome</title>
+    <style>
+      /*
+        @font-face {
+            font-family: 'main';
+            src: url('/assets/fonts/gc.ttf');
+        }
+      */
+        @font-face {
+            font-family: 'main';
+            src: url('/assets/fonts/tahoma.ttf');
+        }
+
+        ::-webkit-scrollbar {
+         width: 0px;  /* Remove scrollbar space */
+         background: transparent;  /* Optional: just make scrollbar invisible */
+         }
+
+         @-moz-document url-prefix() { /* Disable scrollbar Firefox */
+            html{
+              scrollbar-width: none;
+            }
+          }
+          body {
+            margin: 0; /* remove default margin */
+            scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+            -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+            overflow-y: scroll;
+          }
+          body::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+          }
+
+        html {
+            background-color: #111111;
+        }
+
+
+
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+
+        body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        }
+        #overlay {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        cursor: pointer;
+        }
+
+        #text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        color: white;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        }
+
+
+
+        .slidecontainer {
+        width: 100%;
+        }
+
+        .slider {
+        -webkit-appearance: none;
+        background: #ffff;
+        outline: none;
+        width: 200px;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #000;
+        cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+        }
+
+
+        .row1 {
+        display: flex;
+        position: fixed;
+        top: 48%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        }
+
+
+        .column1 {
+            padding: 10px;
+        }
+
+        .coolimage {
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+                transition:         transform .8s ease-in-out;
+        }
+        img:hover {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 17px;
+        background-color: #000;
+        color: white;
+        }
+
+        .myVideo {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        }
+
+        .myVideo::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+
+            /* Whatever IG */
+            background-color: rgba(0,0,0,1);
+        }
+
+        .content {
+        display:inline-block !important; 
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: #f1f1f1;
+        padding: 20px;
+        }
+
+        #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+        }
+
+        #myBtn:hover {
+        background: #ddd;
+        color: black;
+        }
+
+        button {
+        background-color: #00ddff; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        }
+
+        .button1 {
+        background-color: #00ddff; /* Green */
+        border: none;
+        color: white !important;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        }
+
+        .vl {
+        border-left: 6px solid white;
+        }
+
+        #motto {
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        .pfp {
+        border-radius: 50%;
+        }
+		
+		#tsparticles {
+		  width: 100%;
+		  height: 100%;
+		}
+		
+.captcha a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #00ddff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.captcha a:hover {
+  background: #00ddff;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00ddff,
+              0 0 25px #00ddff,
+              0 0 50px #00ddff,
+              0 0 100px #00ddff;
+}
+
+.captcha a span {
+  position: absolute;
+  display: block;
+}
+
+.captcha a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ddff);
+  animation: btn-anim1 1s linear infinite;
+}
+		
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.captcha a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #00ddff);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.captcha a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #00ddff);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.captcha a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #00ddff);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    
+	
+
+      <div id="captcha" class="captcha">
+        <div class="content">
+          <div class="row1">
+            <div class="column1">
+                <a style="font-size:25px" onclick="enterSite();">
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				click to enter
+				</a>
+            </div>
+          </div>
+        </div>
+    </div>
+	
+    <div id="mainSite">
+        <video autoplay loop class="myVideo" id="myVideo" playsinline>
+          Your browser does not support HTML5 video.
+        </video>
+    
+        <div class="content">
+          <div class="row1">
+            <div class="column1">
+			
+                <center>
+                  <h1 class="subtitle is-2" style="font-family: 'main';color: #00ddff;white-space: nowrap;">Xenos#3168</h1>
+					<span class="typewrite" data-period="2000" data-type='[ "Welcome to Xenoshvh.xyz", "Stop pasting and be better.", "Join Discord.", "Making these racks no servers.", "I like men. - Naze", "Be a cotten picking nigger.", "BREAKING NEWS: MAN ROBS BANK TO FUND P2C ON FAMOUS GAME: FORTNITE", "boutta whip out the ouija board and hit her line for some of that ass no CAP", "Should I give vanta silent ;)" ]'>...</span>
+                    <br> <!-- "my pc is sig`d lil bro - vanilla" "I went from a UC taker to a UC giver - vanilla" -->
+                    <br>
+                    <div class="columns">
+                        <div class="column">
+                            <a href="https://discord.gg/nYzh25VDrw" style="color: #00ddff !important;" target="_blank" style="color: #fdfdfd !important;">Discord</a>
+                        </div>
+                    </div>
+                </center>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.min.js"></script>
+<script>
+var x = document.getElementById("mainSite");
+var y = document.getElementById("captcha");
+var particles = document.getElementById("captcha");
+
+var source = document.createElement('source');
+
+/*
+//"follow", "bungo", "lalala", "orb"
+//["joker", "slingshot", "delirium", "witch", "mistake"]
+var songs = ["skrt", "gangster", "mistake", "delirium"];
+const songIndex = Math.floor(Math.random() * songs.length);
+const song = songs[songIndex];*/
+
+x.style.display = "none";
+
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+source.setAttribute('src', 'video/here.mp4');
+video.appendChild(source);
+
+video.pause();
+
+function changeSong(file) {
+  source.setAttribute('src', file);
+  video.appendChild(source);
+  video.load();
+  video.play();
+  document.getElementById("overlay").style.display = "none";
+}
+
+function enterSite() {
+  video.volume = 0.10;
+	video.play();
+	x.style.display = "block";
+	y.style.display = "none";
+	
+tsParticles.load("tsparticles", {
+  fpsLimit: 120,
+  interactivity: {
+    events: {
+      onClick: {
+        enable: false,
+        mode: "push"
+      },
+      onHover: {
+        enable: true,
+        mode: "repulse"
+      },
+      resize: true
+    },
+    modes: {
+      bubble: {
+        distance: 400,
+        duration: 2,
+        opacity: 0.8,
+        size: 40
+      },
+      push: {
+        quantity: 4
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      }
+    }
+  },
+  particles: {
+    color: {
+      value: "#f34943"
+    },
+    links: {
+      color: "#f34943",
+      distance: 150,
+      enable: true,
+      opacity: 0.5,
+      width: 1
+    },
+    collisions: {
+      enable: true
+    },
+    move: {
+      direction: "none",
+      enable: true,
+      outMode: "bounce",
+      random: false,
+      speed: 1,
+      straight: false
+    },
+    number: {
+      density: {
+        enable: true,
+        value_area: 800
+      },
+      value: 25
+    },
+    opacity: {
+      value: 0.5
+    },
+    shape: {
+      type: "circle"
+    },
+    size: {
+      random: true,
+      value: 5
+    }
+  },
+  detectRetina: true
+});
+
+}
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+function updateSlider(slideAmount) {
+    var sliderDiv = document.getElementById("sliderAmount");
+    video.volume = (slideAmount / 100);
+    console.log("New volume: " + video.volume);
+}
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};
+
+</script>
+</body>
+</html>
